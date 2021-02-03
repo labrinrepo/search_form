@@ -1,5 +1,4 @@
 const country_list = document.querySelector(".country-list");
-const programmes = document.querySelector(".programmes");
 
 let countries = [
   "ABŞ",
@@ -27,20 +26,6 @@ let countries = [
   "Malta",
 ];
 
-let programmeList = [
-  "Academy proqramı",
-  "Bakalavr",
-  "Bakalavra hazırlıq",
-  "Dil kursları",
-  "Diplom proqramları",
-  "Foundation",
-  "MBA",
-  "Magistratura",
-  "Magistraturaya hazırlıq",
-  "Pre - Master",
-  "Yay kursları",
-];
-
 const renderCountries = () => {
   let i = 0;
   let countriesLength = countries.length;
@@ -55,18 +40,4 @@ const renderCountries = () => {
   }
 };
 
-const renderProgrammes = () => {
-  let i = 0;
-  let programmesLength = programmeList.length;
-  for (i; i <= programmesLength - 1; i++) {
-    programmes.insertAdjacentHTML(
-      "beforeend",
-      `<div class="checkbox">
-        <input type="checkbox" />
-        <label>${programmeList[i]}</label>
-    </div>`
-    );
-  }
-};
 renderCountries();
-renderProgrammes();
